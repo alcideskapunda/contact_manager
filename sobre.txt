@@ -1,0 +1,13 @@
+//   Resumo /
+- Aplicação para gestão de contactos...
+- tipo agenda que permite: (listar contactos, Filtrar, adicionar, editar, remover);
+- !CRUD
+
+//    Implementação /
+- Dark Mode;
+- localStorage / sessionStorage
+- Codigo de cada pais
+- modal
+
+// ---------------------------------------------------------------------- //
+primeira versão não terá modal (provavelmente)

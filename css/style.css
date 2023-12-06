@@ -1,0 +1,162 @@
+:root{
+    --fundo: #eceff1;
+    --dark: #263238;
+    --borda: #37474f;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    background: var(--fundo);
+    transition: 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi-moon {
+    display: none;
+}
+
+header{
+    background: var(--fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 10px 0.5px;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem auto ;
+    padding: 30px 40px;
+    margin-top: 80px;
+    width: 90%;
+    text-align: center;
+    border: 5px solid var(--borda);
+    border-radius: 1rem;
+}
+
+#add-task #filter-task{
+    flex: 1;
+    border-bottom: 1px solid var(--borda);
+    padding: 1rem;
+}
+
+#add-task select, #add-task input, #add-task button{
+    padding: 14px;
+    border-radius: 10px;
+}
+
+#add-task button {
+    background-color: #4a4adb;
+    color: var(--fundo);
+    font-weight: bold;
+}
+
+#filter-task {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+#filter-task select {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#tasks-container {
+    flex-basis: 100%;
+    border-top: 2px solid black;
+}
+
+.task-item {
+    flex: 3;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 8px;
+}
+
+.task-item p, .task-item button{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.editBtn, .exitBtn{
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.editBtn {
+    background-color: #02029b;
+}
+
+.exitBtn {
+    background-color: #960202;
+}
+
+.task-item i {
+    color: var(--fundo);
+    padding: 12px;
+    
+}
+
+footer{
+    position: absolute;
+    background-color: #222;
+    color: aqua;
+    padding: 16px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer:hover{
+    color: #fff;
+    transition: 0.3s ease;
+}
+footer span {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+/* Dark Theme */
+.dark{
+    background: #1b2e38;;
+} 
+
+.dark header {
+    background-color: #263238;
+    color: var(--fundo);
+}
+
+.dark .bi-sun{
+    display: none;
+}
+
+.dark .bi-moon{
+    display: block;
+}
+
+.dark main{
+    background-color: #37474f;
+    color: #67b4f3;
+}
