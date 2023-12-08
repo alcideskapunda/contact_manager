@@ -17,6 +17,7 @@
 
         <!--=============JavaScript================-->
         <script src="./js/darktheme.js" defer></script>
+        <script src="./js/main.js" defer></script>
     </head>
     <body>
         <header>
@@ -31,17 +32,18 @@
         </header>
         <main>
             <div id="add-task">
-                <select name="" class="codCountry">
+                <!--<select name="" class="cod-country">
                     <option value="+55">+55</option>
                     <option value="+244">+244</option>
                     <option value="+351">+351</option>
-                </select>
-                <input type="text" class="inputContact" placeholder="Digite os seus contactos aqui">
-                <button class="addTaskButton">Adiconar</button>
+                </select> -->
+                <input type="text" class="new-contact-input" placeholder="List aqui os contactos">
+                <button class="add-new-contact">Adiconar</button>
             </div>
             <div id="filter-task">
                 <p>Filtrar contactos</p>
-            <select name="" class="codCountry">
+            <select name="" class="cod-country">
+                <option value="all">Todos</option>
                 <option value="+55">+55</option>
                 <option value="+244">+244</option>
                 <option value="+351">+351</option>
@@ -50,31 +52,14 @@
 
             <div id="tasks-container">
                 <div class="task-item">
-                    <p>9999999999999999999</p>
+                    <p>+244926051630</p>
                     <button class="editBtn">
                         <i class="fa fa-pencil"></i>
                     </button>
-                    <button class="exitBtn">
+                    <button class="deleteBtn">
                         <i class="fa fa-trash"></i>
                     </button>
                 </div>
-                <div class="task-item">
-                    <p>9999999999999999999</p>
-                    <button>
-                        <i class="fa fa-pencil"></i>
-                    </button>
-                    <button>
-                        <i class="fa fa-trash"></i>
-                    </button>
-                </div>
-                <div class="task-item">
-                    <p>9999999999999999999</p>
-                    <button>
-                        <i class="fa fa-pencil"></i>
-                    </button>
-                    <button>
-                        <i class="fa fa-trash"></i>
-                    </button>
                 </div>
             </div>
         </main>

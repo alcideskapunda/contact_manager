@@ -32,9 +32,11 @@ input[type="checkbox"] {
 
 header{
     background: var(--fundo);
+    color: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bolder;
     box-shadow: 0.5px 0.5px 10px 0.5px;
     padding: 1rem 2rem;
     position: relative;
@@ -94,12 +96,16 @@ main {
     margin: 8px;
 }
 
+.task-item p{
+    margin-right: 4px;
+}
+
 .task-item p, .task-item button{
     display: inline-block;
     vertical-align: middle;
 }
 
-.editBtn, .exitBtn{
+.editBtn, .deleteBtn{
     border-radius: 11px;
     cursor: pointer;
 }
@@ -108,18 +114,17 @@ main {
     background-color: #02029b;
 }
 
-.exitBtn {
+.deleteBtn {
     background-color: #960202;
 }
 
 .task-item i {
     color: var(--fundo);
     padding: 12px;
-    
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     background-color: #222;
     color: aqua;
     padding: 16px;
@@ -159,4 +164,13 @@ footer span {
 .dark main{
     background-color: #37474f;
     color: #67b4f3;
+}
+
+/* formato erradso*/
+.error {
+    border: 2px solid red !important;
+}
+
+.error::placeholder{
+    color: red;
 }
