@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
         <!--=============CSS================-->
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/modal.css">
         <title>Gerenciador de Contactos</title>
 
         <!--=============JavaScript================-->
@@ -39,15 +40,16 @@
                 </select> -->
                 <input type="text" class="new-contact-input" placeholder="List aqui os contactos">
                 <button class="add-new-contact">Adiconar</button>
-            </div>
+            </div> 
+
             <div id="filter-task">
                 <p>Filtrar contactos</p>
-            <select name="" class="cod-country">
-                <option value="all">Todos</option>
-                <option value="+55">+55</option>
-                <option value="+244">+244</option>
-                <option value="+351">+351</option>
-            </select>
+                <select name="" class="cod-country">
+                    <option value="all">Todos</option>
+                    <option value="+55">+55</option>
+                    <option value="+244">+244</option>
+                    <option value="+351">+351</option>
+                </select>
             </div>
 
             <div id="tasks-container">
@@ -60,6 +62,15 @@
                         <i class="fa fa-trash"></i>
                     </button>
                 </div>
+            </div>
+            
+
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <input type="text" class="input-edit-contact">
+                    <button class="btn-modal" id="contactoEditado">Editar</button>
+                    <button class="btn-modal" id="close-modal">Cancelar</button>
                 </div>
             </div>
         </main>
