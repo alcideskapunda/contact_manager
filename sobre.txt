@@ -10,4 +10,8 @@
 - modal
 
 // ---------------------------------------------------------------------- //
-primeira versão não terá modal (provavelmente)
+primeira versão feita
+segunda versão as melhorias serão:
+ - editar apenas um elemento
+ - quando editar verificar se o contacto é valido
+ - add o filter

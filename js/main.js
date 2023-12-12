@@ -10,8 +10,6 @@ const modal = document.querySelector("#modal");
 const fade = document.querySelector("#fade");
 
 const contactEditBtn = document.querySelector("#contactoEditado");
-//let contAntesDeSerEditado;
-
 
 const validateContact = () => {
     const angolaRegex = /^\+\d{3}\d{3}\d{3}\d{3}$/;
@@ -38,10 +36,10 @@ const getAddContact = () => {
 
     const pContact = document.createElement("p");
     pContact.innerText = inputContact.value;
-    /*contactEditBtn.addEventListener("click", (e) => {
+    contactEditBtn.addEventListener("click", (e) => {
         pContact.innerText = inputEdit.value;
         e.addEventListener("click", () => toggleModal());
-    });*/
+    });
     divContact.appendChild(pContact);
     
     const btnEdit = document.createElement("button");
@@ -50,13 +48,13 @@ const getAddContact = () => {
     [btnEdit, closeEdit, contactEditBtn].forEach((el) => {
         el.addEventListener("click", () => toggleModal());
     });
-    /*btnEdit.addEventListener("click", (e) => {
+    btnEdit.addEventListener("click", (e) => {
         const targetEl = e.target;
         const parentEl = targetEl.closest("div");
         if (parentEl && parentEl.querySelector("p")) {
-            inputEdit.value = parentEl.querySelector("p").innerText || "";
+            inputEdit.value = parentEl.querySelector("p").innerText;
         }
-    });*/
+    });
     divContact.appendChild(btnEdit);
     
     const btnDelete = document.createElement("button");
@@ -71,6 +69,8 @@ const getAddContact = () => {
     
     taksContainer.appendChild(divContact);
     
+    //localStorage.setItem("contacto", inputContact.value);
+
     inputContact.value = "";
 }
 
@@ -86,30 +86,11 @@ const inputChange = () => {
     }
 };
 
-/*closeEdit.addEventListener("click", () => {
+closeEdit.addEventListener("click", () => {
     [closeEdit, contactEditBtn].forEach((el) => {
         el.addEventListener("click", () => toggleModal());
     });
-});*/
+});
 
 addTaskButton.addEventListener("click", () => getAddContact());
 inputContact.addEventListener("change", () => inputChange());
-
-
-/*document.addEventListener("click", (e) => {
-    const targetEl = e.target;
-    const parentEl = targetEl.closest("div");
-    //let contacto;
-
-    if (parentEl && parentEl.querySelector("p")) {
-        inputEdit.value = parentEl.querySelector("p").innerText || "";
-    }
-
-    if (targetEl.classList.contains("contactoEditado")) {
-        console.log("editou");
-
-        inputEdit.value = inputContact.value;
-        //contAntesDeSerEditado.value = inputContact.value;
-    }
-    
-});*/
